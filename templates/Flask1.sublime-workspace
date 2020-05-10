@@ -1,0 +1,804 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"margin",
+				"margin-left\tproperty"
+			],
+			[
+				"margi",
+				"margin-top\tproperty"
+			],
+			[
+				"ba",
+				"background-image\tproperty"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"backgro",
+				"background-color\tproperty"
+			],
+			[
+				"back",
+				"background-image\tproperty"
+			],
+			[
+				"h",
+				"h1\tTag"
+			],
+			[
+				"d",
+				"div\tTag"
+			],
+			[
+				"kob",
+				"kombi_profile"
+			],
+			[
+				"ti",
+				"title\tTag"
+			],
+			[
+				"eve",
+				"event_handler"
+			],
+			[
+				"S",
+				"Service"
+			],
+			[
+				"font",
+				"font-style\tproperty"
+			],
+			[
+				"flex",
+				"flex-direction\tproperty"
+			],
+			[
+				"backgrou",
+				"background\tproperty"
+			],
+			[
+				"border-co",
+				"border-color\tproperty"
+			],
+			[
+				"reader",
+				"reader_plan"
+			],
+			[
+				"brder",
+				"border-radius\tproperty"
+			],
+			[
+				"border",
+				"border-radius\tproperty"
+			],
+			[
+				"bac",
+				"background-color\tproperty"
+			],
+			[
+				"use",
+				"user_id"
+			],
+			[
+				"Service",
+				"ServiceSchema"
+			],
+			[
+				"Use",
+				"UserSchema"
+			],
+			[
+				"De",
+				"DevSchema"
+			],
+			[
+				"r",
+				"routes"
+			],
+			[
+				"re",
+				"request"
+			],
+			[
+				"col",
+				"color\tproperty"
+			],
+			[
+				"opt",
+				"option\tTag"
+			],
+			[
+				"I",
+				"IV"
+			],
+			[
+				"cla",
+				"classe"
+			],
+			[
+				"co",
+				"content\tproperty"
+			],
+			[
+				"for",
+				"form\tTag"
+			],
+			[
+				"in",
+				"input\tTag"
+			],
+			[
+				"onmo",
+				"onmouseover\tAttr"
+			],
+			[
+				"background-c",
+				"background-color\tproperty"
+			],
+			[
+				"font-s",
+				"font-size\tproperty"
+			],
+			[
+				"i",
+				"initial\tposition"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/C/ProjectsPy/Page1Flask/App.py",
+			"settings":
+			{
+				"buffer_size": 942,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 463,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "base.html",
+			"settings":
+			{
+				"buffer_size": 1795,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "bootstrap.min.css",
+			"settings":
+			{
+				"buffer_size": 159679,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/ProjectsPy/Page1Flask/base.css",
+			"settings":
+			{
+				"buffer_size": 357,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "kombitas.html",
+			"settings":
+			{
+				"buffer_size": 281,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cadastro.html",
+			"settings":
+			{
+				"buffer_size": 2353,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "cadastro.css",
+			"settings":
+			{
+				"buffer_size": 471,
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "links_int.html",
+			"settings":
+			{
+				"buffer_size": 177,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"html",
+				"Set Syntax: HTML"
+			],
+			[
+				"css",
+				"Set Syntax: CSS"
+			],
+			[
+				"PYTH",
+				"Set Syntax: Python"
+			],
+			[
+				"htlm",
+				"Set Syntax: HTML"
+			],
+			[
+				"pyth",
+				"Set Syntax: Python"
+			],
+			[
+				"scss",
+				"Set Syntax: CSS"
+			],
+			[
+				"javas",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"java",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"ja",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"javs",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"j",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"js",
+				"Set Syntax: JavaScript"
+			],
+			[
+				"php",
+				"Set Syntax: PHP"
+			],
+			[
+				"htm",
+				"Set Syntax: HTML"
+			]
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 121.0,
+		"history":
+		[
+			"reloading /C/ProjectsJS/housekeeper/backend/package.json",
+			"yarn add express"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/C/ProjectsPy/base.css",
+		"/C/ProjectsPy/Page1Flask/templates/bootstrap.min.css",
+		"/C/ProjectsPy/Page1Flask/templates/contato.html",
+		"/C/ProjectsPy/Page1Flask/templates/cadastro.css",
+		"/C/ProjectsPy/Page1Flask/watch.py",
+		"/C/ProjectsPy/Page1Flask/index.py",
+		"/C/ProjectsPy/Page1Flask/index2.py",
+		"/C/ProjectsJS/CamaraDosDeputados/src/Components/main/styles.scss",
+		"/C/ProjectsJS/CamaraDosDeputados/public/index.html",
+		"/C/ProjectsJS/weather/index.html",
+		"/C/ProjectsJS/CamaraDosDeputados/src/global.css",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/server.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/models/Service.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/App.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/services/api.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/pages/Login/index.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/pages/Login/index",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/App.css",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/public/index.html",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/controllers/ServiceController.js",
+		"/C/Users/Master/PycharmProjects/Titus-Bode/venv/test.csv",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/src/index.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/frontend/package.json",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/package.json",
+		"/C/ProjectsJS/housekeeper/backend/package.json",
+		"/C/ProjectsJS/housekeeper/frontend/src/App.css",
+		"/C/ProjectsJS/housekeeper/frontend/src/index.js",
+		"/C/ProjectsJS/housekeeper/frontend/src/App.js",
+		"/C/Users/Master/PycharmProjects/Titus-Bode/venv/compositepars.csv",
+		"/C/Users/Master/.git/COMMIT_EDITMSG",
+		"/C/ProjectsJS/housekeeper/frontend/package.json",
+		"/C/ProjectsJS/housekeeper/frontend/public/index.html",
+		"/C/ProjectsJS/housekeeper/package.json",
+		"/C/ProjectsJS/housekeeper/backend/src/models/Adm.js",
+		"/C/ProjectsJS/housekeeper/backend/src/models/User.js",
+		"/C/ProjectsJS/housekeeper/backend/src/routes.js",
+		"/C/ProjectsJS/housekeeper/backend/src/models/Service.js",
+		"/C/ProjectsJS/housekeeper/backend/src/controllers/ServiceController.js",
+		"/C/ProjectsJS/housekeeper/backend/src/models/Booking.js",
+		"/C/ProjectsJS/housekeeper/backend/src/controllers/BookingController.js",
+		"/C/ProjectsJS/housekeeper/backend/node_modules/nodemon/lib/nodemon.js",
+		"/C/ProjectsJS/housekeeper/backend/node_modules/nodemon/commitlint.config.js",
+		"/C/ProjectsJS/housekeeper/backend/src/server.js",
+		"/C/ProjectsJS/housekeeper/backend/src/config/upload.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/routes.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/config/upload.js",
+		"/C/ProjectsJS/housekeeper/Housekeeper-App/backend/src/models/Adm.js",
+		"/C/ProjectsJS/housekeeper/backend/src/controllers/SessionController.js",
+		"/C/ProjectsJS/housekeeper/node_modules/npm-run-path/package.json",
+		"/C/ProjectsJS/housekeeper/src/App.js",
+		"/C/ProjectsJS/housekeeper/src/index.js",
+		"/C/ProjectsJS/housekeeper/node_modules/react-scripts/package.json",
+		"/C/ProjectsJS/housekeeper/node_modules/react-scripts/scripts/start.js",
+		"/C/ProjectsJS/housekeeper/node_modules/pn/child_process.js",
+		"/C/ProjectsJS/housekeeper/node_modules/internal-ip/index.js",
+		"/C/ProjectsJS/housekeeper/node_modules/process/browser.js",
+		"/C/ProjectsJS/housekeeper/node_modules/webpack-dev-server/package.json",
+		"/C/ProjectsJS/housekeeper/node_modules/url/url.js",
+		"/C/ProjectsJS/housekeeper/node_modules/url/package.json",
+		"/C/ProjectsJS/housekeeper/node_modules/react-scripts/scripts/utils/createJestConfig.js",
+		"/C/ProjectsJS/housekeeper/node_modules/react-scripts/scripts/utils/verifyPackageTree.js",
+		"/C/ProjectsJS/housekeeper/node_modules/react-scripts/scripts/build.js",
+		"/C/ProjectsJS/housekeeper/node_modules/process/package.json",
+		"/C/Users/Master/Desktop/LIXO/Boletos para enviar/extrato_conta_corrente_17-04-2020_121147.csv",
+		"/C/Users/Master/Primeiro/README.md",
+		"/C/Program Files/Git/Primeiro/.git/COMMIT_EDITMSG",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/index.tpl",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/category.tpl",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/index.js",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/index.php",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/sitemap.tpl",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/address.tpl",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/404.tpl",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/pdf/index.php",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/config.xml",
+		"/C/Users/Master/Dropbox/Programação/Página Vestuário/theme/themeinstallator/theme1209/themes/theme1209/preview.jpg",
+		"/C/Program Files (x86)/EasyPHP-Devserver-17/eds-www/equacao.php",
+		"/C/Users/Master/Dropbox/Programação/aPágina Millênia/_css/estilo2.css",
+		"/C/Users/Master/Dropbox/Programação/aPágina Millênia/nave.php",
+		"/C/Users/Master/Dropbox/Programação/aPágina Millênia/Espaconaves.html",
+		"/C/Program Files (x86)/EasyPHP-Devserver-17/eds-www/Espaconaves.html",
+		"/C/Program Files (x86)/EasyPHP-Devserver-17/eds-www/ola_mundo.php",
+		"/C/Program Files (x86)/EasyPHP-Devserver-17/eds-www/phpinfo.php",
+		"/C/Program Files (x86)/EasyPHP-Devserver-17/eds-www/Olá Mundo.php",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/produtos.html",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/index.html",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/css/style.css",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/js/html5shiv.js",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/css/style-mobile.css",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/css/style-1000px.css",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/css/style-desktop.css",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/css/skel-noscript.css",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/enviar.php",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/contato.php",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/right-sidebar.html",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/plataformas.html",
+		"/C/Users/Master/Dropbox/Programação/Página Tecnológica/no-sidebar.html",
+		"/C/Users/Master/Dropbox/Programação/aPágina Millênia/teste.html",
+		"/C/Users/Master/Documents/SITES/ola MUNDO 2.html"
+	],
+	"find":
+	{
+		"height": 23.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"')\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/C/ProjectsPy/Page1Flask/App.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 942,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								682,
+								682
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 463,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								463,
+								463
+							]
+						],
+						"settings":
+						{
+							"auto_name": "",
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "base.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1795,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								440,
+								440
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "bootstrap.min.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 159679,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								648,
+								648
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "/C/ProjectsPy/Page1Flask/base.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 357,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								311,
+								311
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "kombitas.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 281,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								164,
+								167
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "cadastro.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2353,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								154,
+								135
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "cadastro.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 471,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "links_int.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 177,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								81,
+								81
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 23.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "",
+	"project": "Flask1.sublime-project",
+	"replace":
+	{
+		"height": 42.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 50.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Cadastro Akompanhe.me{% endblock %}
+{% block content %}
+<div class="row">
+  <div class="col-7">	
+	<h2>Cadastro</h2>
+	<p>Faça seu cadastro, informe o nome de sua Kombi, nos conte um pouco sobre ela e suas aventuras. No final acrescente ao menos 3 fotos (no máximo 10) para podermos conhecê-la melhor.</p>
+	<p> Lembre-se, apesar de você ser muito bonito(a) - temos absoluta certeza - queremos mesmo é conhecer sua Kombi!</p>
+	<p> Pode até ser foto sua (fazer o quê?), mas inclua ela!</p>
+
+	<form>
+
+	  <div class="form-group">
+	  	<label for="InputName">Nome dos proprietário(s)</label>
+	  	<input type="text" name="nm"class="form-control" id="InputName" aria-describedby="names" placeholder="Nome(s)">
+	  </div>
+	  <div>
+	    <label for="InputEmail1">Endereço de email</label>
+	    <input type="email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="Seu email">
+	    <small id="emailHelp" class="form-text text-muted">Não compartilhamos e-mail com ninguém. Este email é exclusivamente para contato entre Akompanha.me e vocês.</small>
+	  </div>
+
+	  <div class="form-group">
+	    <label for="InputPassword1">Senha</label>
+	    <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Senha">
+	  </div>
+
+	  <div class="form-group">
+	  	<label for="InputKombi">Nome da Kombita</label>
+	  	<input type="text" name="nm"class="form-control" id="InputKombi" aria-describedby="names" placeholder="Nome(s)">
+	  </div>
+
+	  <div class="form-group">
+	    <label for="FormControlTextarea1">Conte sobre o projeto</label>
+	    <textarea class="form-control" id="FormControlTextarea1" rows="5" placeholder="Qual foi o objetivo de tê-la? Quais as expectativas? Faça um texto bonito pra xuxu!"></textarea>
+	  </div>
+	  
+	  <button type="submit" class="btn btn-primary">Enviar</button>
+	</form>
+  </div>
+  <div class="col-5">
+    <h2>Já somos cadastrados</h2>
+    <p>Mussum Ipsum, cacilds vidis litro abertis. Praesent malesuada urna nisi, quis volutpat erat hendrerit non. Nam vulputate dapibus. Posuere libero varius. Nullam a nisl ut ante blandit hendrerit. Aenean sit amet nisi. Tá deprimidis, eu conheço uma cachacis que pode alegrar sua vidis. Admodum accumsan disputationi eu sit. Vide electram sadipscing et per.</p>
+  <div>
+	
+</div>
+
+{% endblock %}

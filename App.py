@@ -39,7 +39,7 @@ def links_int():
 
 if __name__ == '__main__':
     app.run(debug=True)
-=======
+
 from flask import Flask, redirect, url_for, render_template, request
 
 app = Flask(__name__.split('.')[0])
@@ -51,7 +51,7 @@ def home():
 
 @app.route('/kombitas')
 def kombitas():
-	return render_template('kombitas.html')
+	return render_template('kombitas.html', comp_komb='active')
 
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
@@ -81,4 +81,4 @@ def links_int():
 
 if __name__ == '__main__':
     app.run(debug=True)
->>>>>>> d792da2c08d6d0d3c7209c2d7f9ad1bc4943b1b9
+

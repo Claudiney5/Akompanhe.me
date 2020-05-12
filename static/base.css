@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 body {
 	background-image: url("/static/camper2.png") !important;
 	background-repeat: no-repeat !important;
@@ -25,31 +25,3 @@ body {
 .afora p {
   color: #000;
 }
-=======
-body {
-	background-image: url("/static/camper2.png") !important;
-	background-repeat: no-repeat !important;
-	background-size: 100% !important;
-	font-family: "roboto", "arial", sans-serif; 
-
-}
-
-.col-2 {
-	display: flex;
-	position: relative !important;
-
-}
-
-.container {
-	padding: 5px 0px 5px 0px !important;
-	color: #fff;
-}
-
-.nave-logo {
-	display: table;
-}
-
-.afora p {
-  color: #000;
-}
->>>>>>> d792da2c08d6d0d3c7209c2d7f9ad1bc4943b1b9

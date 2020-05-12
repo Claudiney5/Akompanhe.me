@@ -1,4 +1,7 @@
 # Akompanhe.me
+
+<img src="static/img/page1.jpg" width="640">
+
 Criação de página agregadora com Flask
 Ferramentas utilizadas:
 

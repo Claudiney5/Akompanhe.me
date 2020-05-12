@@ -17,7 +17,7 @@ O objetivo da página é agregar os canais de proprietários de Kombihomes torna
 
 Página em construção (sem deploy).
 
-#Funcionalidades a serem implementadas
+# Funcionalidades a serem implementadas
 - cadastro de kombihomes
 - carregamento automático dos profiles na página de apresentação
 - páginas de profile com carrossel das imagens

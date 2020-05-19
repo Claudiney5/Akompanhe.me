@@ -1,10 +1,13 @@
 
 
-from flask import Flask, redirect, url_for, render_template, request,session
+from flask import Flask, redirect, url_for, render_template, request,session, flash
+from datetime import timedelta
+import sqlalchemy
 
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
+app.permanent_session_lifetime = timedelta(days=30)
 
 
 @app.route('/')
@@ -12,12 +15,13 @@ def home():
     return render_template('index.html', component1='active')
 
 @app.route('/kombitas')
-def kombitas():
+def kombitas(): 
     return render_template('kombitas.html', comp_komb='active')
 
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     if request.method == 'POST':
+        session.permanent = False
         session["names"] = request.form['names']
         session['new_email'] = request.form['new_email']
         session['new_pass'] = request.form['new_pass']

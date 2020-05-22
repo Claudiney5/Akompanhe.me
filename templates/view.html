@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+{% extends "base.html" %}
+{% block title %}Todas as Kombi Homes{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="/static/css/view.css" />
+{% endblock %}
+
+{% block content %}
+    {% for item in values %} 
+    <div class="col-sm">
+	    <div class="card">
+			<div class="card-body">
+		        <p>Kombi: {{item.kombi}}</p>
+		        <p>Proprietários: {{item.propri}}</p>
+		        <p>E-mail: {{item.email}}</p>
+		        <p>Texto: {{item.texto}}</p>
+	    	</div>
+		</div>
+	</div>
+    {%endfor%}
+
+
+
+
+{% endblock %}

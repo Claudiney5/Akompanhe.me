@@ -2,6 +2,58 @@
 {% extends "base.html" %}
 {% block title %}Contate Akompanhe.me{% endblock %}
 {% block content %}
-<h1>Novo cadastro</h1>
+<div class="row">
+
+	<div class="card-deck">
+  		<div class="card">
+  			<div class="card-body">
+				<h2>Bem vindo(s) {{kombi}}</h2>
+				<p>Ficamos felizes em termos vocês no nosso aplicativo. VAmos fazer muitas amizades e blá, blá, bla.</p>
+				<p>Revise suas informações abaixo.</p>
+				<p>Ao lado acrescente até 12 fotos da kombosa.</p>
+				<p>Em poucas horas faremos a aprovação de seu cadastro e vocês serão listados na págiana das Kombis pelo Mundo com sua própria página. Vamos lá?</p>
+
+				<form action="#" method="POST">
+
+					<div class="form-group">
+					  	<label for="InputName">Nome dos proprietário(s)</label>
+					  	<input type="text" name="names" class="form-control" id="InputName" aria-describedby="names" placeholder="{{proprietarios}}" value="{{proprietariios if proprietarios}}">
+					</div>
+					<div>
+					    <label for="InputEmail1">Endereço de email</label>
+					    <input type="email" name="new_email" class="form-control" id="InputEmail1" aria-describedby="emailHelp" placeholder="{{email}}" value="{{email if email}}">
+					</div>
+
+					<div class="form-group">
+					    <label for="InputPassword1">Senha</label>
+					    <input type="password" name="new_pass"  class="form-control" id="InputPassword1" placeholder="Senha" value="{{senha if senha}}">
+					</div>
+
+					<div class="form-group">
+					  	<label for="InputKombi">Nome da Kombi</label>
+					  	<input type="text" name="new_kombi"class="form-control" id="InputKombi" aria-describedby="names" placeholder="{{kombi}}" value='{{kombi if kombi}}'>
+					</div>
+
+					<div class="form-group">
+					    <label for="FormControlTextarea1">Conte sobre o projeto</label>
+					    <textarea class="form-control" name="resume"  id="FormControlTextarea1" rows="5" placeholder="{{texto}}" value='{{texto if texto}}'></textarea>
+					</div>
+					  
+					<button type="submit" class="btn btn-primary">Enviar</button>
+
+				</form>
+			</div>
+		</div>
+
+		<div class="card">
+  			<div class="card-body">
+			    <h2>Imagens da {{ kombi }}</h2>
+			    
+
+			</div>
+		</div>
+	</div>
+	
+</div>
 
 {% endblock %}

@@ -16,10 +16,10 @@ db = SQLAlchemy(app)
 class KombiHome(db.Model):
     _id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
-    kombi = db.Column(db.String(25), unique=True, nullable=False)
-    propri = db.Column(db.String(80), unique=True, nullable=False)
-    senha = db.Column(db.String(80), unique=True, nullable=False)
-    texto = db.Column(db.String(500), unique=True, nullable=False)
+    kombi = db.Column(db.String(25), unique=False, nullable=False)
+    propri = db.Column(db.String(80), unique=False, nullable=False)
+    senha = db.Column(db.String(80), unique=False, nullable=False)
+    texto = db.Column(db.String(500), unique=False, nullable=False)
 
     def __init__(self, email, kombi, propri, senha, texto):
         self.email = email
@@ -62,26 +62,29 @@ def cadastro():
             db.session.add(kmb)
             db.session.commit()
 
-        return redirect(url_for('new'))
+        return redirect(url_for('bemVindo', values=KombiHome.query.all()))
 
     else:
         return render_template('cadastro.html')
+
+@app.route('/bem-vindo')
+def bemVindo():
+    return render_template('bem-vindo.html')
     
      
 @app.route('/new_profile')
 def new():
-    if 'new_kombi' in session:
+    if request.method == 'POST':
         kombi = session['new_kombi']
-        proprietarios = session['names']
+        propri = session['names']
         senha = session['new_pass']
         email = session['new_email']
         texto = session['resume']
-        return f'''<h1>A  kombita {kombi } pertence a { proprietarios }</h1>
-                  Senha : {senha}
-                  {texto}'''
+
+        return render_template('index.html')
                 
     else:
-        return redirect(url_for('cadastro'))
+        return render_template('new.html')
 
 @app.route('/kombits/<profile>')
 def kombi_prof():

@@ -1,0 +1,27 @@
+
+body {
+	background-image: url("/static/img/dribbble_1.jpg") !important;
+	background-repeat: no-repeat !important;
+	background-size: 100% !important;
+	font-family: "roboto", "arial", sans-serif; 
+
+}
+
+.col-2 {
+	display: flex;
+	position: relative !important;
+
+}
+
+.container {
+	padding: 5px 0px 5px 0px !important;
+	color: #fff;
+}
+
+.nave-logo {
+	display: table;
+}
+
+.afora p {
+  color: #000;
+}

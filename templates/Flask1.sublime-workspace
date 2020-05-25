@@ -5,7 +5,7 @@
 		[
 			[
 				"new",
-				"new_pass"
+				"new_email"
 			],
 			[
 				"f",
@@ -179,9 +179,18 @@
 			"file": "/C/ProjectsPy/Page1Flask/App.py",
 			"settings":
 			{
-				"buffer_size": 1908,
+				"buffer_size": 3280,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "new.html",
+			"settings":
+			{
+				"buffer_size": 2188,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -191,6 +200,24 @@
 				"buffer_size": 3395,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/C/ProjectsPy/Page1Flask/static/css/new.css",
+			"settings":
+			{
+				"buffer_size": 240,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "view.html",
+			"settings":
+			{
+				"buffer_size": 557,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
 			}
 		},
 		{
@@ -215,7 +242,7 @@
 			"file": "base.html",
 			"settings":
 			{
-				"buffer_size": 1879,
+				"buffer_size": 1866,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -225,33 +252,6 @@
 			"settings":
 			{
 				"buffer_size": 387,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/ProjectsPy/Page1Flask/static/css/cadastro.css",
-			"settings":
-			{
-				"buffer_size": 240,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "contato.html",
-			"settings":
-			{
-				"buffer_size": 159,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "links_int.html",
-			"settings":
-			{
-				"buffer_size": 179,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -347,6 +347,8 @@
 	},
 	"file_history":
 	[
+		"/C/ProjectsPy/Page1Flask/templates/contato.html",
+		"/C/ProjectsPy/Page1Flask/templates/links_int.html",
 		"/C/ProjectsPy/Page1Flask/App.py",
 		"/C/Users/Master/Downloads/exoplaneteu.csv",
 		"/C/Users/Master/Desktop/aula03/aula01.ipynb",
@@ -356,14 +358,12 @@
 		"/C/ProjectsPy/Page1Flask/templates/kombitas.html",
 		"/C/ProjectsPy/Page1Flask/static/cadastro.css",
 		"/C/ProjectsPy/Page1Flask/static/kombitas.css",
-		"/C/ProjectsPy/Page1Flask/templates/links_int.html",
 		"/C/ProjectsPy/Page1Flask/templates/cadastro.html",
 		"/C/ProjectsPy/Page1Flask/templates/index.html",
 		"/C/ProjectsPy/Page1Flask/static/index.css",
 		"/C/ProjectsPy/Page1Flask/index.py",
 		"/C/ProjectsPy/Page1Flask/templates/bootstrap.min.css",
 		"/C/ProjectsPy/base.css",
-		"/C/ProjectsPy/Page1Flask/templates/contato.html",
 		"/C/ProjectsPy/Page1Flask/templates/cadastro.css",
 		"/C/ProjectsPy/Page1Flask/watch.py",
 		"/C/ProjectsPy/Page1Flask/index2.py",
@@ -476,6 +476,9 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"kombihome",
+			"Login",
+			"login\t",
 			";'",
 			"text-info",
 			"')\n"
@@ -496,7 +499,7 @@
 	"groups":
 	[
 		{
-			"selected": 4,
+			"selected": 0,
 			"sheets":
 			[
 				{
@@ -505,15 +508,15 @@
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1908,
+						"buffer_size": 3280,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								499,
-								499
+								2669,
+								2669
 							]
 						],
 						"settings":
@@ -523,14 +526,42 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 0.0,
+						"translation.y": 488.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 0,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
+					"file": "new.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2188,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								238,
+								238
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
 					"file": "cadastro.html",
 					"semi_transient": false,
 					"settings":
@@ -542,8 +573,8 @@
 						"selection":
 						[
 							[
-								1652,
-								1652
+								2164,
+								2164
 							]
 						],
 						"settings":
@@ -552,14 +583,72 @@
 							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 210.0,
+						"translation.y": 305.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 3,
+					"file": "/C/ProjectsPy/Page1Flask/static/css/new.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 240,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "view.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 557,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								251,
+								226
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
 					"file": "login.html",
 					"semi_transient": false,
 					"settings":
@@ -571,8 +660,8 @@
 						"selection":
 						[
 							[
-								739,
-								739
+								756,
+								0
 							]
 						],
 						"settings":
@@ -583,11 +672,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 4,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
+					"buffer": 6,
 					"file": "index.html",
 					"semi_transient": false,
 					"settings":
@@ -599,8 +688,8 @@
 						"selection":
 						[
 							[
-								154,
-								154
+								396,
+								376
 							]
 						],
 						"settings":
@@ -613,24 +702,24 @@
 						"translation.y": 263.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 5,
+					"stack_index": 6,
 					"type": "text"
 				},
 				{
-					"buffer": 4,
+					"buffer": 7,
 					"file": "base.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1879,
+						"buffer_size": 1866,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								774,
-								774
+								704,
+								704
 							]
 						],
 						"settings":
@@ -642,11 +731,11 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 5,
+					"buffer": 8,
 					"file": "/C/ProjectsPy/Page1Flask/static/css/base.css",
 					"semi_transient": false,
 					"settings":
@@ -671,92 +760,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "/C/ProjectsPy/Page1Flask/static/css/cadastro.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 240,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								34,
-								34
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 4,
-					"type": "text"
-				},
-				{
-					"buffer": 7,
-					"file": "contato.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 159,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								159,
-								159
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
 					"stack_index": 7,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "links_int.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 179,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								178,
-								178
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
 					"type": "text"
 				}
 			]

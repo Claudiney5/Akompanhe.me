@@ -109,7 +109,15 @@ def links_int():
 
 @app.route('/view')
 def view():
-    return render_template("view.html", values=KombiHome.query.all())
+    if request.method == 'POST': 
+        session.permanent = False
+        email = request.form['email']
+        session['email'] = email
+        senha = request.form['senha']
+        session['senha'] = senha
+        return redirect(url_for('kombi_prof'))
+    else:
+        return render_template("view.html", values=KombiHome.query.all())
 
 
 if __name__ == '__main__':

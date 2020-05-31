@@ -1,0 +1,15 @@
+body {
+	background-color: #AFD2B1!important;
+	font-family: "roboto", "arial", sans-serif; 
+}
+
+.card-deck {
+	padding: 20px 40px 20px 40px;
+}
+
+.row {
+	background-color: #AFD2B1 !important;
+	font-family: "roboto", "arial", sans-serif; 
+	padding-top: 30px;
+}
+

@@ -5,6 +5,11 @@
 
 {% block link %}
     <link rel="stylesheet" type="text/css" href="/static/css/cadastro.css" />
+    {{ dropzone.load() }}
+    {{ dropzone.style('border: 1px dashed #FF5555;
+                       margin: 10%; 
+                       min-height: 160px;
+                     ') }}
 {% endblock %}
 
 {% block content %}
@@ -14,7 +19,7 @@
   		<div class="card">
   			<div class="card-body">
 				<h2>Cadastro</h2>
-				<p>Faça seu cadastro, informe o nome de sua Kombi, nos conte um pouco sobre ela e suas aventuras. No final acrescente ao menos 3 fotos (no máximo 12) para podermos conhecê-la melhor. FAça isso ao lado.</p>
+				<p>Faça seu cadastro, informe o nome de sua Kombi, nos conte um pouco sobre ela e suas aventuras. No final acrescente ao menos 3 fotos (no máximo 12) para podermos conhecê-la melhor. Faça isso ao lado.</p>
 				<p> Lembre-se, apesar de você ser muito bonito(a) - temos absoluta certeza - queremos mesmo é conhecer sua Kombi!</p>
 				<p> Pode até ser foto sua (fazer o quê?), mas inclua ela!</p>
 
@@ -53,16 +58,19 @@
 		<div class="card">
   			<div class="card-body">
 			    <h2>Coloque as fotos aqui</h2>
-			    <img class="card-img-top" src="/static/img/k_verm.jpg" style="padding: 50px;" />
-			    <p>Coloque até 12 fotos com boa resolução.</p>
+			    <p class="photo">Coloque até 12 fotos com boa resolução (máximo de 16MB).</p>
 
-			    <form action="contato" method="post">
+			    {{ dropzone.create(action_view='cadastro') }}
+
+			    <p>Você pode colocar as fotos depois, mas sua página só irá ao ar se tiver ao menos 3 fotos!</p>
+
+			    <img class="card-img-top" src="/static/img/k_verm.jpg" style="padding: 20px 50px;" />
+
+			    <div>
 
 				    <p>Seu cadastro e fotos serão enviados para a moderação que em 48 horas aprovará. Você receberá um email informando a aprovação. Quando entrar em sua página de gerenciamento você poderá incluir várias plataformas de divulgação, como Instagran, Youtube, etc </p>
-				    <p>Você pode colocar as fotos depois, mas sua página só irá ao ar se tiver ao menos 3 fotos!</p>
-					
 
-			    </form>
+			    </div>
 			</div>
 		</div>
 	</div>

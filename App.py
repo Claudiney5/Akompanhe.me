@@ -1,6 +1,9 @@
 
 
 from flask import Flask, redirect, url_for, render_template, request, session, flash
+from flask_dropzone import Dropzone
+from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
+import os
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 
@@ -12,6 +15,20 @@ app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
 
 db = SQLAlchemy(app)
+dropzone = Dropzone(app)
+
+app.config['DROPZONE_UPLOAD_MULTIPLE'] = True
+app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
+app.config['DROPZONE_DEFAULT_MESSAGE'] = 'Arraste sua Kombi para cá! Só as imagens! O quê você pensou??'
+app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
+app.config['DROPZONE_REDIRECT_VIEW'] = 'bemVindo'
+
+# Uploads settings
+app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
+photos = UploadSet('photos', IMAGES)
+configure_uploads(app, photos)
+patch_request_class(app)  # set maximum file size, default is 16MB
+
 
 class KombiHome(db.Model):
     _id = db.Column(db.Integer, primary_key=True)
@@ -29,6 +46,7 @@ class KombiHome(db.Model):
         self.texto = texto
 
 
+
 @app.route('/')
 def home():
     return render_template('index.html', component1='active')
@@ -36,6 +54,7 @@ def home():
 @app.route('/kombitas')
 def kombitas(): 
     return render_template('kombitas.html', comp_komb='active')
+
 
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
@@ -52,13 +71,17 @@ def cadastro():
         session["new_kombi"] = kombi
         texto = request.form['resume']
         session['resume'] = texto
+        file_obj = request.files
 
+        for f in file_obj:
+            file = request.files.get(f)
+        
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
             flash("Este e-mail já esta cadastrado. Faça o seu Login")
             return redirect(url_for('login'))
         else:
-            kmb = KombiHome(email, kombi, propri, senha, texto) 
+            kmb = KombiHome(email, kombi, propri, senha, texto, file) 
             db.session.add(kmb)
             db.session.commit()
 
@@ -66,6 +89,8 @@ def cadastro():
 
     else:
         return render_template('cadastro.html')
+
+
 
 @app.route('/bem-vindo')
 def bemVindo():

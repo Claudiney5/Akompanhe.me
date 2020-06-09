@@ -13,3 +13,8 @@ body {
 	padding-top: 30px;
 }
 
+.img-card {
+	background-color: #F6EEEE;
+	margin: 38px;
+	border-radius: 8px;
+}

@@ -2,7 +2,39 @@
 <!DOCTYPE html>
 {% extends "base.html" %}
 {% block title %}Contate Akompanhe.me{% endblock %}
+
+{% block link %}
+	<link rel="stylesheet" type="text/css" href="/static/css/contato.css">
+{% endblock %}	
+
 {% block content %}
-<p>Formulario de contato</p>
+<div class="all-form">
+	<div class="contact">
+		<h2>Formulário de Contato</h2>
+
+		<p>Precisa falar conosco. Sem problemas. Mande-nos um e-mail que tentaremos esclarecer suas dúvidas.</p>
+
+		<form>
+			<div>			
+				<label for="contactName">Nome:</label>
+				<input type="text" name="cName" placeholder="Seu nome" />
+			</div>
+			<div>
+				<label for="contactEmail">Digite seu email (usaremos ele para lhe responder):</label>
+				<input type="email" name="cEmail" placeholder="Seu melhor email">
+			</div>
+			<div>
+				<label for="contactText">Dúvida, sugestão, reclamação,...</label>
+				<textarea class="Text" name="cText" placeholder="Seu texto"></textarea>
+			</div>
+
+			<button class="buttom-send" href="submit"> Enviar Email</button>
+
+		</form>
+	</div>
+	<div class="contact">
+		<img src="/static/img/k_verde_esmeralda.jpg">
+	</div>
+</div>
 
 {% endblock %}

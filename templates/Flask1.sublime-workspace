@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"padd",
+				"padding-top\tproperty"
+			],
+			[
 				"new",
 				"new_email"
 			],
@@ -176,6 +180,33 @@
 	"buffers":
 	[
 		{
+			"file": "/C/ProjectsPy/Page1Flask/App.py",
+			"settings":
+			{
+				"buffer_size": 3642,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "login.html",
+			"settings":
+			{
+				"buffer_size": 1279,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		},
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 1649,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
 			"file": "new.html",
 			"settings":
 			{
@@ -194,30 +225,21 @@
 			}
 		},
 		{
-			"file": "/C/ProjectsPy/Page1Flask/static/css/new.css",
-			"settings":
-			{
-				"buffer_size": 240,
-				"encoding": "UTF-8",
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"file": "view.html",
 			"settings":
 			{
-				"buffer_size": 557,
+				"buffer_size": 596,
 				"encoding": "UTF-8",
 				"line_ending": "Windows"
 			}
 		},
 		{
-			"file": "login.html",
+			"file": "/C/ProjectsPy/Page1Flask/static/css/login.css",
 			"settings":
 			{
-				"buffer_size": 756,
+				"buffer_size": 256,
 				"encoding": "UTF-8",
-				"line_ending": "Windows"
+				"line_ending": "Unix"
 			}
 		},
 		{
@@ -242,25 +264,9 @@
 			"file": "base.html",
 			"settings":
 			{
-				"buffer_size": 1866,
+				"buffer_size": 1862,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "/C/ProjectsPy/Titus-Bode/systems.csv",
-			"settings":
-			{
-				"buffer_size": 159164,
-				"line_ending": "Windows"
-			}
-		},
-		{
-			"file": "/C/ProjectsPy/Titus-Bode/compositepars.csv",
-			"settings":
-			{
-				"buffer_size": 2225486,
-				"line_ending": "Windows"
 			}
 		}
 	],
@@ -354,6 +360,9 @@
 	},
 	"file_history":
 	[
+		"/C/ProjectsJS/nlw_Rocketseat/README.md",
+		"/C/ProjectsPy/Titus-Bode/README.md",
+		"/C/ProjectsPy/Titus-Bode/compositepars.csv",
 		"/C/ProjectsPy/Titus-Bode/systems.csv",
 		"/C/ProjectsPy/MachineLearningCourse/Cluster/04_scikit_kmeans_cc.py",
 		"/C/ProjectsPy/Page1Flask/App.py",
@@ -508,11 +517,99 @@
 	"groups":
 	[
 		{
-			"selected": 9,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
+					"file": "/C/ProjectsPy/Page1Flask/App.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 3642,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3365,
+								3365
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1008.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "login.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1279,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1095,
+								1095
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1649,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
 					"file": "new.html",
 					"semi_transient": false,
 					"settings":
@@ -540,7 +637,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 1,
+					"buffer": 4,
 					"file": "cadastro.html",
 					"semi_transient": false,
 					"settings":
@@ -552,8 +649,8 @@
 						"selection":
 						[
 							[
-								2284,
-								2284
+								2524,
+								2352
 							]
 						],
 						"settings":
@@ -565,24 +662,53 @@
 						"translation.y": 193.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 7,
+					"stack_index": 1,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "/C/ProjectsPy/Page1Flask/static/css/new.css",
+					"buffer": 5,
+					"file": "view.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 240,
+						"buffer_size": 596,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								175,
-								175
+								526,
+								526
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "/C/ProjectsPy/Page1Flask/static/css/login.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 256,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								256,
+								256
 							]
 						],
 						"settings":
@@ -598,64 +724,7 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "view.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 557,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								251,
-								226
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 8,
-					"type": "text"
-				},
-				{
-					"buffer": 4,
-					"file": "login.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 756,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								756,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.sublime-syntax"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 6,
-					"type": "text"
-				},
-				{
-					"buffer": 5,
+					"buffer": 7,
 					"file": "bem-vindo.html",
 					"semi_transient": false,
 					"settings":
@@ -681,11 +750,11 @@
 						"translation.y": 53.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 4,
+					"stack_index": 8,
 					"type": "text"
 				},
 				{
-					"buffer": 6,
+					"buffer": 8,
 					"file": "/C/ProjectsPy/Page1Flask/static/css/bem-vindo.css",
 					"semi_transient": false,
 					"settings":
@@ -710,24 +779,24 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 3,
+					"stack_index": 7,
 					"type": "text"
 				},
 				{
-					"buffer": 7,
+					"buffer": 9,
 					"file": "base.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1866,
+						"buffer_size": 1862,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								704,
-								704
+								1165,
+								1165
 							]
 						],
 						"settings":
@@ -739,63 +808,7 @@
 						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
-					"type": "text"
-				},
-				{
-					"buffer": 8,
-					"file": "/C/ProjectsPy/Titus-Bode/systems.csv",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 159164,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 9,
-					"file": "/C/ProjectsPy/Titus-Bode/compositepars.csv",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2225486,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								0,
-								0
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
+					"stack_index": 6,
 					"type": "text"
 				}
 			]

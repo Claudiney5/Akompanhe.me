@@ -7,6 +7,11 @@ body {
 
 }
 
+.nav-link {
+	font-style: bold !important;
+	color: white !important;
+}
+
 .col-2 {
 	display: flex;
 	position: relative !important;

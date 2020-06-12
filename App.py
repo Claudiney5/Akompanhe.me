@@ -21,7 +21,7 @@ app.config['DROPZONE_UPLOAD_MULTIPLE'] = True
 app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
 app.config['DROPZONE_DEFAULT_MESSAGE'] = 'Arraste sua Kombi para cá! Só as imagens! O quê você pensou??'
 app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
-app.config['DROPZONE_REDIRECT_VIEW'] = 'bemVindo'
+app.config['DROPZONE_REDIRECT_VIEW'] = 'cadastro'
 
 # Uploads settings
 app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
@@ -46,7 +46,6 @@ class KombiHome(db.Model):
         self.texto = texto
 
 
-
 @app.route('/')
 def home():
     return render_template('index.html', component1='active')
@@ -59,6 +58,10 @@ def kombitas():
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     email = None
+    if "file_urls" not in session:
+        session['file_urls'] = []
+    file_urls = session['file_urls']
+   
     if request.method == 'POST': 
         session.permanent = False
         propri = request.form['names']
@@ -75,20 +78,24 @@ def cadastro():
 
         for f in file_obj:
             file = request.files.get(f)
+            filename = photos.save(file, name=file.filename)
+            file_urls.append(photos.url(filename))
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
             flash("Este e-mail já esta cadastrado. Faça o seu Login")
             return redirect(url_for('login'))
         else:
-            kmb = KombiHome(email, kombi, propri, senha, texto, file) 
+            kmb = KombiHome(email, kombi, propri, senha, texto, file_urls) 
             db.session.add(kmb)
             db.session.commit()
 
-        return redirect(url_for('bemVindo', values=KombiHome.query.all()))
+            return redirect(url_for('bemVindo', values=KombiHome.query.all()))
 
     else:
-        return render_template('cadastro.html')
+        file_urls = session['file_urls']
+        session.pop('file_urls', None)
+        return render_template('cadastro.html', file_urls=file_urls)
 
 
 

@@ -49,7 +49,7 @@
 					    <label for="FormControlTextarea1">Conte sobre o projeto</label>
 					    <textarea class="form-control" name="resume"  id="FormControlTextarea1" rows="5" placeholder="Qual foi o objetivo de tê-la? Quais as expectativas? Faça um texto bonito pra xuxu!"></textarea>
 					</div>
-					<button href="submit" class="btn btn-primary">   Enviar   </button>
+					<button href="submit" class="btn btn-primary">   Enviar cadastro</button>
 					  
 				</form>
 			</div>
@@ -61,6 +61,12 @@
 			    <p class="photo">Coloque até 12 fotos com boa resolução (máximo de 16MB).</p>
 
 			    {{ dropzone.create(action_view='cadastro') }}
+
+			    <ul>
+                    {% for file_url in file_urls %}
+                        <li><img style="height: 100px" src="{{ file_url }}"></li>
+                    {% endfor %}
+                </ul>
 
 			    <p>Você pode colocar as fotos depois, mas sua página só irá ao ar se tiver ao menos 3 fotos!</p>
 

@@ -10,24 +10,31 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombitas.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis5.db'
+app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
 
 db = SQLAlchemy(app)
 dropzone = Dropzone(app)
 
-app.config['DROPZONE_UPLOAD_MULTIPLE'] = True
-app.config['DROPZONE_ALLOWED_FILE_CUSTOM'] = True
-app.config['DROPZONE_DEFAULT_MESSAGE'] = 'Arraste sua Kombi para cá! Só as imagens! O quê você pensou??'
-app.config['DROPZONE_ALLOWED_FILE_TYPE'] = 'image/*'
-app.config['DROPZONE_REDIRECT_VIEW'] = 'cadastro'
+app.config.update(
+    #UPLOADED_PATH=os.path.join(basedir, 'uploads'),
+    DROPZONE_UPLOAD_MULTIPLE = True,
+    DROPZONE_PARALLEL_UPLOADS = 12,  # handle 12 file per request
+    DROPZONE_ALLOWED_FILE_CUSTOM = True,
+    DROPZONE_DEFAULT_MESSAGE = 'Arraste suas imagens ou cliques aqui para busca-las',
+    DROPZONE_ALLOWED_FILE_TYPE = 'image/*',
+    DROPZONE_MAX_FILES = 12,
+    DROPZONE_MAX_FILE_EXCEED = 'A garagem está cheia. 12 é o número máximo de fotos.'
+)
 
-# Uploads settings
-app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
-photos = UploadSet('photos', IMAGES)
-configure_uploads(app, photos)
-patch_request_class(app)  # set maximum file size, default is 16MB
+
+#  Uploads settings
+#app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
+#photos = UploadSet('photos', IMAGES)
+#configure_uploads(app, photos)
+#patch_request_class(app)  #  set maximum file size, default is 16MB
 
 
 class KombiHome(db.Model):
@@ -37,13 +44,15 @@ class KombiHome(db.Model):
     propri = db.Column(db.String(80), unique=False, nullable=False)
     senha = db.Column(db.String(80), unique=False, nullable=False)
     texto = db.Column(db.String(500), unique=False, nullable=False)
+    imagens = db.Column(db.LargeBinary)
 
-    def __init__(self, email, kombi, propri, senha, texto):
+    def __init__(self, email, kombi, propri, senha, texto, imagens):
         self.email = email
         self.kombi = kombi
         self.propri = propri
         self.senha = senha
         self.texto = texto
+        self.imagens = imagens
 
 
 @app.route('/')
@@ -52,18 +61,18 @@ def home():
 
 @app.route('/kombitas')
 def kombitas(): 
-    return render_template('kombitas.html', comp_komb='active')
+    kombi = KombiHome.query.filter_by(kombi='Manjedora').first_or_404()
+    return render_template('kombitas.html', comp_komb='active', kombi=kombi)
 
 
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     email = None
-    if "file_urls" not in session:
-        session['file_urls'] = []
-    file_urls = session['file_urls']
+    
    
     if request.method == 'POST': 
         session.permanent = False
+
         propri = request.form['names']
         session["names"] = propri
         email = request.form['new_email']
@@ -72,30 +81,34 @@ def cadastro():
         session['new_pass'] = senha
         kombi = request.form['new_kombi']
         session["new_kombi"] = kombi
+
         texto = request.form['resume']
         session['resume'] = texto
-        file_obj = request.files
 
-        for f in file_obj:
-            file = request.files.get(f)
-            filename = photos.save(file, name=file.filename)
-            file_urls.append(photos.url(filename))
+        imagens = request.files
+
+        for key, f in request.files.items():
+            if key.startswith('file'):
+                imagens.append(f.filename)
+
+        session['imagens'] = imagens
+
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
             flash("Este e-mail já esta cadastrado. Faça o seu Login")
             return redirect(url_for('login'))
         else:
-            kmb = KombiHome(email, kombi, propri, senha, texto, file_urls) 
+            kmb = KombiHome(email, kombi, propri, senha, texto, imagens) 
             db.session.add(kmb)
             db.session.commit()
 
             return redirect(url_for('bemVindo', values=KombiHome.query.all()))
 
     else:
-        file_urls = session['file_urls']
-        session.pop('file_urls', None)
-        return render_template('cadastro.html', file_urls=file_urls)
+        
+        session.pop('imagens', None)
+        return render_template('cadastro.html')
 
 
 

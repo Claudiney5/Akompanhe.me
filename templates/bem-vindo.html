@@ -24,6 +24,11 @@
                         <p class="text-dark card-text">Espero que aprecie as companhias e novas amizades que acontecerão.</p>
                         <p class="text-dark card-text">Abração da equipe do Akompanhe.me</p>
                         <p class="text-dark card-text">Enquanto isso, que tal dar uma olhada no que nossos companheiros estão fazendo?</p>
+
+                        {% for key, item in kmb.imagens %}
+                            <h1>{key} : {item}</h1>
+                        {% endfor %}
+
                         <a href="kombitas" class="btn btn-primary">Kombis Mundo Afora</a>
                     </div>
                 </div>
@@ -44,7 +49,9 @@
     <footer class="d-flex justify-content-center">
     	<div class="card" style="width: 28rem;">
 			<div class="card-body" >
-    			<p class="text-dark text-center">Akompanhe.ME, please! Por favorzinho, vai!</p>
+    			{% for key, item in kmb.imagens %}
+                    <h1>{key} : {item}</h1>
+                {% endfor %}
     		</div>
     	</div>
 

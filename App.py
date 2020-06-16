@@ -4,13 +4,14 @@ from flask import Flask, redirect, url_for, render_template, request, session, f
 from flask_dropzone import Dropzone
 from flask_uploads import UploadSet, configure_uploads, IMAGES, patch_request_class
 import os
+import sys
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis5.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis3.db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
@@ -44,7 +45,7 @@ class KombiHome(db.Model):
     propri = db.Column(db.String(80), unique=False, nullable=False)
     senha = db.Column(db.String(80), unique=False, nullable=False)
     texto = db.Column(db.String(500), unique=False, nullable=False)
-    imagens = db.Column(db.LargeBinary)
+    imagens = db.Column(db.String(84), unique=False, nullable=False)
 
     def __init__(self, email, kombi, propri, senha, texto, imagens):
         self.email = email
@@ -73,8 +74,8 @@ def cadastro():
     if request.method == 'POST': 
         session.permanent = False
 
-        propri = request.form['names']
-        session["names"] = propri
+        propri = request.form['nomes']
+        session['nomes'] = propri
         email = request.form['new_email']
         session['new_email'] = email
         senha = request.form['new_pass']
@@ -92,7 +93,6 @@ def cadastro():
                 imagens.append(f.filename)
 
         session['imagens'] = imagens
-
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
@@ -100,10 +100,17 @@ def cadastro():
             return redirect(url_for('login'))
         else:
             kmb = KombiHome(email, kombi, propri, senha, texto, imagens) 
-            db.session.add(kmb)
-            db.session.commit()
 
-            return redirect(url_for('bemVindo', values=KombiHome.query.all()))
+            print("alo kmb -------------------------------------")
+            print()
+            print()
+            print(kmb)
+
+            #db.session.add(kmb)
+            #db.session.commit()
+
+            #return redirect(url_for('bemVindo', values=kmb))
+            return render_template('bem-vindo.html', kmb=kmb)
 
     else:
         
@@ -114,7 +121,7 @@ def cadastro():
 
 @app.route('/bem-vindo')
 def bemVindo():
-    return render_template('bem-vindo.html')
+    return render_template('bem-vindo.html', kmb=kmb)
     
      
 @app.route('/new_profile')

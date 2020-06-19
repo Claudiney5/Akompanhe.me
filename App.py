@@ -74,32 +74,32 @@ def cadastro():
     if request.method == 'POST': 
         session.permanent = False
 
-        propri = request.form['nomes']
+        propri = request.form.get('nomes')
         session['nomes'] = propri
-        email = request.form['new_email']
+        email = request.form.get('new_email')
         session['new_email'] = email
-        senha = request.form['new_pass']
+        senha = request.form.get('new_pass')
         session['new_pass'] = senha
-        kombi = request.form['new_kombi']
+        kombi = request.form.get('new_kombi')
         session["new_kombi"] = kombi
 
-        texto = request.form['resume']
+        texto = request.form.get('resume')
         session['resume'] = texto
 
         imagens = request.files
 
         for key, f in request.files.items():
             if key.startswith('file'):
-                imagens.append(f.filename)
+                img1 = imagens.pop()           #-------- AQUI ------------
 
-        session['imagens'] = imagens
+        session['img1'] = img1
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
             flash("Este e-mail já esta cadastrado. Faça o seu Login")
             return redirect(url_for('login'))
         else:
-            kmb = KombiHome(email, kombi, propri, senha, texto, imagens) 
+            kmb = KombiHome(email, kombi, propri, senha, texto, img1) 
 
             print("alo kmb -------------------------------------")
             print()

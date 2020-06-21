@@ -11,7 +11,7 @@ from flask_sqlalchemy import SQLAlchemy
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis3.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis2.db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
@@ -31,13 +31,6 @@ app.config.update(
 )
 
 
-#  Uploads settings
-#app.config['UPLOADED_PHOTOS_DEST'] = os.getcwd() + '/uploads'
-#photos = UploadSet('photos', IMAGES)
-#configure_uploads(app, photos)
-#patch_request_class(app)  #  set maximum file size, default is 16MB
-
-
 class KombiHome(db.Model):
     _id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
@@ -45,7 +38,7 @@ class KombiHome(db.Model):
     propri = db.Column(db.String(80), unique=False, nullable=False)
     senha = db.Column(db.String(80), unique=False, nullable=False)
     texto = db.Column(db.String(500), unique=False, nullable=False)
-    imagens = db.Column(db.String(84), unique=False, nullable=False)
+    imagens = db.Column(db.LargeBinary(), unique=False, nullable=True)
 
     def __init__(self, email, kombi, propri, senha, texto, imagens):
         self.email = email
@@ -54,6 +47,7 @@ class KombiHome(db.Model):
         self.senha = senha
         self.texto = texto
         self.imagens = imagens
+        # ALTERAR CONFORME STACKFLOW
 
 
 @app.route('/')
@@ -69,6 +63,7 @@ def kombitas():
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     email = None
+    img1 = None
     
    
     if request.method == 'POST': 
@@ -86,12 +81,7 @@ def cadastro():
         texto = request.form.get('resume')
         session['resume'] = texto
 
-        imagens = request.files
-
-        for key, f in request.files.items():
-            if key.startswith('file'):
-                img1 = imagens.pop()           #-------- AQUI ------------
-
+        img1 = request.files.get('files')
         session['img1'] = img1
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
@@ -106,10 +96,9 @@ def cadastro():
             print()
             print(kmb)
 
-            #db.session.add(kmb)
-            #db.session.commit()
+            db.session.add(kmb)
+            db.session.commit()
 
-            #return redirect(url_for('bemVindo', values=kmb))
             return render_template('bem-vindo.html', kmb=kmb)
 
     else:

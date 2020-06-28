@@ -7,6 +7,7 @@ import os
 import sys
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
+from wtforms import Form, BooleanField, StringField, validators, PasswordField
 
 
 app = Flask(__name__.split('.')[0])
@@ -50,6 +51,15 @@ class KombiHome(db.Model):
         # ALTERAR CONFORME STACKFLOW
 
 
+class RegistrationForm(Form):
+    propri = StringField('nomes', [validators.Length(min=2, max=25)])
+    email = StringField('new_email', [
+        validators.Length(min=6, message=_(u'Muito pequeno para um endereço de email, não?')),
+        validators.Email(message=_(u'Não é um email válido!'))
+    ])
+    senha = PasswordField('new_pass', [validators.DataRequired()])
+
+
 @app.route('/')
 def home():
     return render_template('index.html', component1='active')
@@ -63,10 +73,9 @@ def kombitas():
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     email = None
-    img1 = None
-    
+    img1 = None    
    
-    if request.method == 'POST': 
+    if request.method == 'POST' : 
         session.permanent = False
 
         propri = request.form.get('nomes')

@@ -12,7 +12,7 @@ from wtforms import Form, BooleanField, StringField, validators, PasswordField
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis2.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis3.db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
@@ -24,9 +24,9 @@ app.config.update(
     #UPLOADED_PATH=os.path.join(basedir, 'uploads'),
     DROPZONE_UPLOAD_MULTIPLE = True,
     DROPZONE_PARALLEL_UPLOADS = 12,  # handle 12 file per request
-    DROPZONE_ALLOWED_FILE_CUSTOM = True,
-    DROPZONE_DEFAULT_MESSAGE = 'Arraste suas imagens ou cliques aqui para busca-las',
-    DROPZONE_ALLOWED_FILE_TYPE = 'image/*',
+    #DROPZONE_ALLOWED_FILE_CUSTOM = True,
+    DROPZONE_DEFAULT_MESSAGE = "Arraste suas imagens ou cliques aqui para busca-las",
+    DROPZONE_ALLOWED_FILE_TYPE = 'image',
     DROPZONE_MAX_FILES = 12,
     DROPZONE_MAX_FILE_EXCEED = 'A garagem está cheia. 12 é o número máximo de fotos.'
 )
@@ -54,8 +54,8 @@ class KombiHome(db.Model):
 class RegistrationForm(Form):
     propri = StringField('nomes', [validators.Length(min=2, max=25)])
     email = StringField('new_email', [
-        validators.Length(min=6, message=_(u'Muito pequeno para um endereço de email, não?')),
-        validators.Email(message=_(u'Não é um email válido!'))
+        validators.Length(min=6, message=(u'Muito pequeno para um endereço de email, não?')),
+        validators.Email(message=(u'Não é um email válido!'))
     ])
     senha = PasswordField('new_pass', [validators.DataRequired()])
 
@@ -66,8 +66,9 @@ def home():
 
 @app.route('/kombitas')
 def kombitas(): 
-    kombi = KombiHome.query.filter_by(kombi='Manjedora').first_or_404()
-    return render_template('kombitas.html', comp_komb='active', kombi=kombi)
+    for i in range(6):
+        kombi[i] = KombiHome.query.filter_by(kombi=i).first_or_404()
+    return render_template('kombitas.html', comp_komb='active')
 
 
 @app.route('/cadastro', methods=["POST", "GET"])

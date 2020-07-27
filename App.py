@@ -9,10 +9,13 @@ from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, validators, PasswordField
 
+##
+basedir = os.path.abspath(os.path.dirname(__file__))
+
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis3.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis5.db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
@@ -28,12 +31,13 @@ app.config.update(
     DROPZONE_DEFAULT_MESSAGE = "Arraste suas imagens ou cliques aqui para busca-las",
     DROPZONE_ALLOWED_FILE_TYPE = 'image',
     DROPZONE_MAX_FILES = 12,
-    DROPZONE_MAX_FILE_EXCEED = 'A garagem está cheia. 12 é o número máximo de fotos.'
+    DROPZONE_MAX_FILE_EXCEED = 'A garagem está cheia. 12 é o número máximo de fotos.',
+    DROPZONE_UPLOAD_ON_CLICK=True
 )
 
 
 class KombiHome(db.Model):
-    _id = db.Column(db.Integer, primary_key=True)
+    _id = db.Column(db.Integer, primary_key=True, autoincrement=True)
     email = db.Column(db.String(120), unique=True, nullable=False)
     kombi = db.Column(db.String(25), unique=False, nullable=False)
     propri = db.Column(db.String(80), unique=False, nullable=False)
@@ -91,7 +95,7 @@ def cadastro():
         texto = request.form.get('resume')
         session['resume'] = texto
 
-        img1 = request.files.get('files')
+        img1 = request.files.get('file')
         session['img1'] = img1
         
         found_kombi = KombiHome.query.filter_by(email=email).first()

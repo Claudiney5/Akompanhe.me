@@ -5,18 +5,14 @@
 
 {% block link %}
     <link rel="stylesheet" type="text/css" href="/static/css/cadastro.css" />
-    {{ dropzone.load_css() }}
-    {{ dropzone.style('border: 1px dashed #FF5555;
-                       margin: 10%; 
-                       min-height: 160px;
-                     ') }}
-    
+        
 {% endblock %}
 
 {% block content %}
 <div class="row">
 
 	<div class="card-deck">
+
   		<div class="card">
   			<div class="card-body">
 				<h2>Cadastro</h2>
@@ -54,30 +50,19 @@
 					  
 				</form>
 			</div>
-		</div>
+		</div>		
 
 		<div class="card">
-  			<div class="card-body">
-			    <h2>Coloque as fotos aqui</h2>
-			    <p class="photo">Coloque até 12 fotos com boa resolução (máximo de 16MB).</p>
-
-			    {{ dropzone.create(action='cadastro') }}
-
-			    <p>Você pode colocar as fotos depois, mas sua página só irá ao ar se tiver ao menos 3 fotos!</p>
-
+  			<div class="card-body">  				
+			
 			    <img class="card-img-top" src="/static/img/k_verm.jpg" style="padding: 20px 50px;" />
 
-			    <div>
-
-				    <p>Seu cadastro e fotos serão enviados para a moderação que em 48 horas aprovará. Você receberá um email informando a aprovação. Quando entrar em sua página de gerenciamento você poderá incluir várias plataformas de divulgação, como Instagran, Youtube, etc </p>
-
-			    </div>
-			</div>
+			</div>			
 		</div>
+
 	</div>
 	
 </div>
-{{ dropzone.load_js() }}
-{{ dropzone.config() }}
+
 
 {% endblock %}

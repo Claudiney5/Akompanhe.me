@@ -1,0 +1,41 @@
+<!DOCTYPE>
+{% extends "base.html" %}
+{% block title %}Cadastro Akompanhe.me{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" type="text/css" href="/static/css/cadastro.css" />
+    {{ dropzone.load_css() }}
+    {{ dropzone.style('border: 1px dashed #FF5555;
+                       margin: 10%; 
+                       min-height: 160px;
+                     ') }}
+    
+{% endblock %}
+
+{% block content %}
+    <div class="card-deck">
+		<div class="card">
+  			<div class="card-body">
+  				
+			    <h2>Coloque as fotos aqui</h2>
+			    <p class="photo">Coloque até 12 fotos com boa resolução (máximo de 16MB).</p>
+
+			    {{ dropzone.create(action='fotos') }}  
+			    <button id="upload" class="btn btn-primary">Enviar fotos</button>
+			    {{ dropzone.load_js() }}
+                {{ dropzone.config() }}
+
+			    <p style="margin-top: 20px;">Você pode colocar as fotos depois, mas sua página só irá ao ar se tiver ao menos 3 fotos!</p>
+
+			    <div style="margin-top: 20px;">
+
+				    <p>Seu cadastro e suas fotos serão enviados para a moderação que em 48 horas aprovará. Você receberá um email informando a aprovação. Quando entrar em sua página de gerenciamento você poderá incluir várias plataformas de divulgação, como Instagran, Youtube, etc </p>
+
+			    </div>
+
+			</div>			
+		</div>
+    </div>
+		
+
+{% endblock %}

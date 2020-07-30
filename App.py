@@ -8,14 +8,15 @@ import sys
 from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, validators, PasswordField
+from werkzeug.utils import secure_filename
 
-##
 basedir = os.path.abspath(os.path.dirname(__file__))
 
+ALLOWED_EXTENSIONS = {'png', 'jpg', 'jpeg', 'gif'}
 
 app = Flask(__name__.split('.')[0])
 app.secret_key = "segredo"
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis5.db'
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:////kombis4.db'
 app.config['SQLALCHEMY_ECHO'] = True
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 app.permanent_session_lifetime = timedelta(days=30)
@@ -24,15 +25,15 @@ db = SQLAlchemy(app)
 dropzone = Dropzone(app)
 
 app.config.update(
-    #UPLOADED_PATH=os.path.join(basedir, 'uploads'),
     DROPZONE_UPLOAD_MULTIPLE = True,
     DROPZONE_PARALLEL_UPLOADS = 12,  # handle 12 file per request
-    #DROPZONE_ALLOWED_FILE_CUSTOM = True,
+    UPLOADED_PATH=os.path.join(basedir, 'kombits'),
     DROPZONE_DEFAULT_MESSAGE = "Arraste suas imagens ou cliques aqui para busca-las",
     DROPZONE_ALLOWED_FILE_TYPE = 'image',
     DROPZONE_MAX_FILES = 12,
     DROPZONE_MAX_FILE_EXCEED = 'A garagem está cheia. 12 é o número máximo de fotos.',
-    DROPZONE_UPLOAD_ON_CLICK=True
+    DROPZONE_UPLOAD_ON_CLICK=True,
+    DROPZONE_REDIRECT_VIEW='bemVindo'
 )
 
 
@@ -43,16 +44,14 @@ class KombiHome(db.Model):
     propri = db.Column(db.String(80), unique=False, nullable=False)
     senha = db.Column(db.String(80), unique=False, nullable=False)
     texto = db.Column(db.String(500), unique=False, nullable=False)
-    imagens = db.Column(db.LargeBinary(), unique=False, nullable=True)
 
-    def __init__(self, email, kombi, propri, senha, texto, imagens):
+    def __init__(self, email, kombi, propri, senha, texto):
         self.email = email
         self.kombi = kombi
         self.propri = propri
         self.senha = senha
         self.texto = texto
-        self.imagens = imagens
-        # ALTERAR CONFORME STACKFLOW
+
 
 
 class RegistrationForm(Form):
@@ -62,6 +61,10 @@ class RegistrationForm(Form):
         validators.Email(message=(u'Não é um email válido!'))
     ])
     senha = PasswordField('new_pass', [validators.DataRequired()])
+
+
+def allowed_file(filename):
+    return '.' in filename and filename.rsplit('.', 1)[1].lower() in ALLOWED_EXTENSIONS
 
 
 @app.route('/')
@@ -78,7 +81,6 @@ def kombitas():
 @app.route('/cadastro', methods=["POST", "GET"])
 def cadastro():
     email = None
-    img1 = None    
    
     if request.method == 'POST' : 
         session.permanent = False
@@ -91,29 +93,20 @@ def cadastro():
         session['new_pass'] = senha
         kombi = request.form.get('new_kombi')
         session["new_kombi"] = kombi
-
         texto = request.form.get('resume')
         session['resume'] = texto
-
-        img1 = request.files.get('file')
-        session['img1'] = img1
         
         found_kombi = KombiHome.query.filter_by(email=email).first()
         if found_kombi:
             flash("Este e-mail já esta cadastrado. Faça o seu Login")
             return redirect(url_for('login'))
         else:
-            kmb = KombiHome(email, kombi, propri, senha, texto, img1) 
-
-            print("alo kmb -------------------------------------")
-            print()
-            print()
-            print(kmb)
+            kmb = KombiHome(email, kombi, propri, senha, texto) 
 
             db.session.add(kmb)
             db.session.commit()
 
-            return render_template('bem-vindo.html', kmb=kmb)
+            return render_template('fotos.html', kmb=kmb)
 
     else:
         
@@ -121,10 +114,17 @@ def cadastro():
         return render_template('cadastro.html')
 
 
+@app.route('/fotos', methods=['POST', 'GET'])
+def fotos():
+    if request.method == 'POST':
+        for key, f in request.files.items():
+            if key.startswith('file'):
+                f.save(os.path.join(app.config['UPLOADED_PATH'], f.filename))
+    return render_template('bem-vindo.html')
 
-@app.route('/bem-vindo')
+@app.route('/bem-vindo', methods=['POST', 'GET'])
 def bemVindo():
-    return render_template('bem-vindo.html', kmb=kmb)
+    return render_template('bem-vindo.html')
     
      
 @app.route('/new_profile')

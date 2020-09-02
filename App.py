@@ -73,8 +73,8 @@ def home():
 
 @app.route('/kombitas')
 def kombitas(): 
-    for i in range(6):
-        kombi[i] = KombiHome.query.filter_by(kombi=i).first_or_404()
+    # for i in range(6):
+    #     kombi[i] = KombiHome.query.filter_by(kombi=i).first_or_404()
     return render_template('kombitas.html', comp_komb='active')
 
 

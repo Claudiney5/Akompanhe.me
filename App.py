@@ -9,6 +9,8 @@ from datetime import timedelta
 from flask_sqlalchemy import SQLAlchemy
 from wtforms import Form, BooleanField, StringField, validators, PasswordField
 from werkzeug.utils import secure_filename
+import flask_heroku
+flask_heroku.settings(locals())
 
 basedir = os.path.abspath(os.path.dirname(__file__))
 

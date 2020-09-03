@@ -1,8 +1,9 @@
 
 body {
 	background-image: url("/static/img/camper2.png") !important;
+	background-color: rgb(226, 233, 238);
 	background-repeat: no-repeat !important;
-	background-size: 100% !important;
+	background-size: 80% !important;
 	font-family: "roboto", "arial", sans-serif; 
 
 }
@@ -29,4 +30,8 @@ body {
 
 .afora p {
   color: #000;
+}
+
+.rodape {
+	width: 100%;
 }

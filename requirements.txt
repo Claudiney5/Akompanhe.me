@@ -11,3 +11,4 @@ flask_uploads==0.2.1
 flask_sqlalchemy==2.4.4
 wtforms==2.3.3
 flask_heroku==0.1.4
+
